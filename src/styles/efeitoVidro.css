@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+
+
+/*referencia o html*/
+:root {
+  --white-glass: rgba(231, 231, 231, 0.5);
+}
+
+
+.back-city {
+  /* 100% da largura inicial da tela*/
+  width: 100vw;
+  /* 100% da altura inicial da tela*/
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url(../img/wallpaperflare.com_wallpaper.jpg);
+  background-size: cover;
+
+}
+
+.card {
+  width: 750px;
+  height: 250px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.glass {
+  border: 10px solid var(--white-glass);
+  backdrop-filter: blur(5px);
+}
+
+.glass p {
+  font-family: 'Montserrat', sans-serif;
+  color: antiquewhitee;
+}

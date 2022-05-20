@@ -1,0 +1,73 @@
+/*reiniciando o css da paginas*/
+* {
+  list-style: none;
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+/*definindo as propriedades do body*/
+body {
+  background-image: url(../img/eva.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+}
+
+/*lista da nav bar*/
+ul {
+  margin-top: 15px;
+  padding: 0;
+
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-start;
+}
+
+/*deixando as cores dos links azul bem forte e sem sublinhado*/
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+/*header com h1*/
+.sobreMim {
+  text-align: center;
+  margin-bottom: 80px;
+  color: aqua;
+}
+
+
+/*img e paragrafo sobre mim*/
+.avatar-container {
+  display: flex;
+  /*Horizontalmente*/
+  justify-content: center;
+  /*Verticalmente*/
+  align-items: center;
+  flex-flow: row;
+}
+
+/*cor do meu texto dos paragrafos*/
+.avatarText {
+  color: antiquewhite;
+}
+
+.img {
+  padding: 10px;
+}
+
+/*h2 titulo do video*/
+#video {
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 10px;
+  color: aqua;
+}
+
+/*video em si */
+.iframe {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
