@@ -1,5 +1,7 @@
+/*importando a fonte usada no botao*/
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
+/*resetando o css da pagina antes de tudo*/
 * {
   list-style: none;
   margin: 0%;
@@ -7,6 +9,7 @@
   box-sizing: border-box;
 }
 
+/*Definindo a imagem de fundo do site*/
 body {
   background-image: url(/src/img/backeva.jpg);
   background-repeat: no-repeat;
@@ -14,6 +17,7 @@ body {
 }
 
 /*NAVBAR*/
+/*Estilizando tamanho, formato da foto e etc*/
 .menu img {
   width: 60px;
   margin-left: 20px;
@@ -44,7 +48,7 @@ body {
 
 }
 
-/*personalizando diretamente o link da navbar*/
+/*personalizando diretamente o link do menu*/
 .aMenu {
   text-decoration: none;
   color: whitesmoke;
@@ -54,7 +58,8 @@ body {
 
 }
 
-/*h1*/
+/*HEADER (H1)*/
+/*Estilizaçaão da tag <h1>*/
 .header {
   display: flex;
   justify-content: center;
@@ -63,13 +68,14 @@ body {
   -webkit-text-stroke-color: rgb(219, 17, 17);
 }
 
-/* valores das propriedades da animação atribuídas */
+/* valores das propriedades da animação atribuídas na tag <h1>*/
 .neon-header {
   line-height: 2;
   color: whitesmoke;
   animation: neon 1s ease-in-out infinite alternate;
 }
 
+/*FORM*/
 /*LUGAR DA DIV EM VOLTA DO FORM*/
 #principal {
   display: flex;
@@ -77,16 +83,11 @@ body {
   margin-bottom: 100px;
 }
 
-/*DIV EM VOLTA DO FORM*/
+/*APLICANDO ESTILOS NA DIV EM VOLTA DO FORM*/
 .container {
   width: 500px;
   margin-top: 25px;
   padding: 15px;
-
-  border: 2px solid rgb(219, 17, 17);
-  animation: neon 1s ease-in-out infinite alternate;
-  border-radius: 10px;
-
   /*cor opaca do fundo*/
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(219, 17, 17, 0.37);
@@ -97,15 +98,17 @@ body {
   border: 5px solid rgba(255, 0, 0, 0.342);
 }
 
-/*Form*/
+/*Posicionando onde ficará as caixas do formulário*/
 #form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/*LABEL*/
+/*Modificando as tags <span> que estão dentro das tags <label>*/
 .borda_texto {
+  animation: neon 1s ease-in-out infinite alternate;
+  border-radius: 10px;
   color: whitesmoke;
   font-size: 30px;
   /* colocar borda diretamente na fonte
@@ -114,8 +117,9 @@ body {
   */
 }
 
-/*INPUT*/
-#nome {
+/*CAIXAS DE INPUT*/
+/*Estilizando as caixas de input com a animação e etc*/
+#name {
   width: 200px;
   height: 25px;
   border-radius: 10px;
@@ -126,6 +130,11 @@ body {
   border: 2px solid rgba(117, 5, 5, 0.63);
   padding: 10px;
   color: rgba(0, 0, 0, 1);
+}
+
+/*da apenas um espacamento da div de resposta de verificacao feita pelo js*/
+.verificaInput {
+  margin-top: 7px;
 }
 
 #email {
@@ -142,7 +151,6 @@ body {
 }
 
 #assunto {
-
   width: 450px;
   height: 120px;
   border-radius: 10px;
@@ -155,6 +163,7 @@ body {
   color: rgba(0, 0, 0, 1);
 }
 
+/*BOTAO*/
 .botao {
   width: 100px;
   height: 30px;
@@ -168,11 +177,13 @@ body {
   border: 2px solid rgba(117, 5, 5, 0.63);
 }
 
+/*posicionando a tag <footer> que fica em volta dos icones do linkedin e do github*/
 .footer {
   display: flex;
   justify-content: center;
 }
 
+/*posisicionando os icones no centro da tag <footer>  e estilizando os icones*/
 #imagensFinais {
   display: flex;
   justify-content: center;
@@ -181,6 +192,8 @@ body {
   align-items: center;
 }
 
+
+/*CRIANDO A ANIMACAO DE NEON*/
 /* várias combinações de cores usadas para criar
 efeito neon */
 @keyframes neon {
