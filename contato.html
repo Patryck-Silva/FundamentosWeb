@@ -5,43 +5,61 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./src/styles/contato.css">
   <title>Contatos</title>
 </head>
 
 <body>
-  <ul>
-    <li>
-      <a href="index.html">Home</a>
-    </li>
-    <li>
-      <a href="contato.html" target="_blank">Contatos</a>
-    </li>
-  </ul>
+  <nav class="menu">
+    <img src="./src/img/foto.png" alt="foto-perfil">
+    <ul id="ulMenu">
+      <li class="liMenu">
+        <a class="aMenu" href="index.html">Home</a>
+      </li>
+      <li class="liMenu">
+        <a class="aMenu" href="efeitoVidro.html" target="_blank">Efeito de vidro</a>
+      </li>
+      <li class="liMenu">
+        <a class="aMenu" href="contato.html" target="_blank">Contatos</a>
+      </li>
+    </ul>
+  </nav>
+  <header class="header">
+    <span class="neon-header">
+      <h1>Entre em contato comigo!</h1>
+    </span>
+  </header>
+  <main id="principal">
+    <div class="container">
+      <form id="form" onsubmit="enviar()">
+        <label for="nome"><span class="borda_texto">Nome:</span></label><br>
+        <input type="text" id="nome" placeholder="Seu nome">
+        <br>
+        <br>
+        <label for="email"><span class="borda_texto">Email:</span> </label><br>
+        <input type="email" id="email" placeholder="exemplo@exemplo.com">
+        <br>
+        <br>
+        <label for="assunto"><span class="borda_texto">Assunto:</span></label><br>
+        <textarea name="assunto" id="assunto" cols="60" rows="5" placeholder="Digite aqui o assunto"></textarea>
+        <br>
+        <br>
+        <button class="botao">Enviar</button>
+      </form>
+    </div>
+  </main>
+  <footer class="footer">
+    <div id="imagensFinais">
+      <a href="https://www.linkedin.com/in/patryck-silva/"><img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="icone linkedin"
+          width="60px" height="60px" /></a>
 
-  <h1>Entre em contato comigo!</h1>
-
-  <form action="">
-    <label for="nome">Nome:</label><br>
-    <input type="text" id="nome" placeholder="Seu nome">
-    <br>
-    <br>
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" placeholder="exemplo@exemplo.com">
-    <br>
-    <br>
-    <label for="assunto">Assunto:</label><br>
-    <textarea name="assunto" id="assunto" cols="60" rows="5"></textarea>
-
-    <br>
-    <br>
-    <button>Enviar</button>
-    <br>
-    <br>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3699.1589921591953!2d-47.86049814893211!3d-22.005218211783177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b876ba719b1429%3A0x3f2c7264a9a6b30c!2zMjLCsDAwJzE3LjMiUyA0N8KwNTEnMjEuNSJX!5e0!3m2!1spt-BR!2sbr!4v1652992213319!5m2!1spt-BR!2sbr"
-      width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </form>
+      <a href="https://github.com/Patryck-Silva"><img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" alt="github icon"
+          width="60px" height="60px" /></a>
+    </div>
+  </footer>
+  <script src="./src/js/contato.js"></script>
 </body>
 
 </html>
