@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  list-style: none;
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(/src/img/backeva.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*NAVBAR*/
+.menu img {
+  width: 60px;
+  margin-left: 20px;
+  margin-top: 10px;
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+/*aumentando tamanho da foto quando passar o mouse*/
+.menu img:hover {
+  width: 120px;
+}
+
+/*deixando um item do lado do outro*/
+#ulMenu {
+  margin-top: -40px;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  margin-right: 15px;
+}
+
+/*fazendo mudanças nos li quando passar o mouse*/
+.liMenu:hover {
+  font-size: 19px;
+  color: rgba(231, 231, 231, 0.6);
+  font-weight: 700;
+
+}
+
+/*personalizando diretamente o link da navbar*/
+.aMenu {
+  text-decoration: none;
+  color: whitesmoke;
+  border: 1px solid rgb(117, 5, 5);
+  padding: 5px;
+  border-radius: 10px;
+
+}
+
+/*h1*/
+.header {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(219, 17, 17);
+}
+
+/* valores das propriedades da animação atribuídas */
+.neon-header {
+  line-height: 2;
+  color: whitesmoke;
+  animation: neon 1s ease-in-out infinite alternate;
+}
+
+/*LUGAR DA DIV EM VOLTA DO FORM*/
+#principal {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+/*DIV EM VOLTA DO FORM*/
+.container {
+  width: 500px;
+  margin-top: 25px;
+  padding: 15px;
+
+  border: 2px solid rgb(219, 17, 17);
+  animation: neon 1s ease-in-out infinite alternate;
+  border-radius: 10px;
+
+  /*cor opaca do fundo*/
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(219, 17, 17, 0.37);
+  /*efeito blur*/
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 5px solid rgba(255, 0, 0, 0.342);
+}
+
+/*Form*/
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*LABEL*/
+.borda_texto {
+  color: whitesmoke;
+  font-size: 30px;
+  /* colocar borda diretamente na fonte
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(219, 17, 17);
+  */
+}
+
+/*INPUT*/
+#nome {
+  width: 200px;
+  height: 25px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(219, 17, 17, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 2px solid rgba(117, 5, 5, 0.63);
+  padding: 10px;
+  color: rgba(0, 0, 0, 1);
+}
+
+#email {
+  width: 250px;
+  height: 25px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(219, 17, 17, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 2px solid rgba(117, 5, 5, 0.63);
+  padding: 10px;
+  color: rgba(0, 0, 0, 1);
+}
+
+#assunto {
+
+  width: 450px;
+  height: 120px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(219, 17, 17, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 2px solid rgba(117, 5, 5, 0.63);
+  padding: 10px;
+  color: rgba(0, 0, 0, 1);
+}
+
+.botao {
+  width: 100px;
+  height: 30px;
+  font-family: 'Press Start 2P', cursive;
+  color: red;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(219, 17, 17, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 2px solid rgba(117, 5, 5, 0.63);
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+#imagensFinais {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  width: 400px;
+  align-items: center;
+}
+
+/* várias combinações de cores usadas para criar
+efeito neon */
+@keyframes neon {
+  from {
+    text-shadow: 0 0 35px #d30606,
+      0 0 40px #c53c1a,
+      0 0 55px #e27114;
+  }
