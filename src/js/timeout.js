@@ -20,7 +20,7 @@ function espacoMsg(){
 
 
 //dark theme
-
-function darkmode(){
-
+// Dark Theme
+function darkTheme(){
+  document.body.classList.toggle('dark-theme')
 }
