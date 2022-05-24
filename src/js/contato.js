@@ -16,38 +16,50 @@ let nome = document.getElementById('name')/*primeiro acessamos a window q tem o 
 let email = document.getElementById('email') /*como a window sempre tem acesso a tudo, ela pode ser ocultada na consulta e partimos apenas da document*/
 let assunto = document.getElementById('assunto')/*acessando pelo nome*/
 
-function validaNome(){
-  let txt = document.querySelector('#txtNome')
-  
-    if(nome.value.length < 3){
-        txt.innerHTML = 'Nome inválido'
-        txt.style.color = 'red'
+let nomeCerto = false
+let emailCerto = false
+let assuntoCerto = false
 
+function validaNome(){
+  let txtNome = document.getElementById('txtNome')
+    if(nome.value.length < 3){
+        txtNome.innerHTML = 'Nome inválido'
+        txtNome.style.color = 'red'
+        nomeCerto = false
     }else{ 
-        txt.innerHTML = 'Nome válido'
-        txt.style.color = 'blue'
+        txtNome.innerHTML = 'Nome válido'
+        txtNome.style.color = 'blue'
+        nomeCerto = true
     }
 }
 function validaEmail(){
-  let txtEmail=document.querySelector('#txtEmail')
-  if(email.value.indexOf('@')== -1){
+  let txtEmail=document.getElementById('txtEmail')
+  if(email.value.indexOf('@')== -1 || email.value.indexOf('.com') == -1){
       txtEmail.innerHTML='E-mail inválido'
       txtEmail.style.color='red'
+      emailCerto = false
   }else{
       txtEmail.innerHTML='E-mail válido'
       txtEmail.style.color='blue'
+      emailCerto = true
   }
 }
-function verifica(){
-  if(nome.value == "" || email.value == "" || assunto.value == ""){
-      alert("Todos os campos devem ser preenchidos")
-      return false
+function validaAssunto(){
+  let txtAssunto = document.getElementById('txtAssunto')
+  if(assunto.value != ""){
+    txtAssunto.textContent = '';
+    assuntoCerto = true
+  }else{
+    assuntoCerto = false
+    txtAssunto.innerHTML = 'Deve ser inserida alguma mensagem!!'
+    txtAssunto.style.color = 'red'
+    txtAssunto.style.fontSize = '20px'
   }
-  return true
 }
-
 function enviar(){
-  if(verifica()){
-    alert(`Olá! ${nome.value}! Foi enviada uma cópia do formulário para ${email.value}` )
+  if(nomeCerto == true && emailCerto == true && assuntoCerto == true){
+    alert(`Olá ${nome.value}! Foi enviada uma cópia do formulário para ${email.value}` )
+  }else{
+    alert("Algum campo está incorreto")
   }
 }

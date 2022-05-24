@@ -31,7 +31,7 @@
   </header>
   <main id="principal">
     <div class="container">
-      <form id="form" onsubmit="enviar()">
+      <form id="form">
         <label for="nome"><span class="borda_texto">Nome:</span></label><br>
         <input type="text" id="name" placeholder="Seu nome" onkeyup="validaNome()">
         <div id="txtNome" class="divResposta"></div>
@@ -40,11 +40,14 @@
         <input type="email" id="email" placeholder="exemplo@exemplo.com" onkeyup="validaEmail()">
         <div id="txtEmail" class="verificaInput"></div>
         <br>
-        <label for="assunto"><span class="borda_texto">Assunto:</span></label><br>
-        <textarea name="assunto" id="assunto" cols="60" rows="5" placeholder="Digite aqui o assunto"></textarea>
+        <label for="assunto"><span class="borda_texto">Mensagem:</span></label><br>
+        <textarea name="assunto" id="assunto" cols="60" rows="5" placeholder="Digite aqui o assunto"
+          onkeyup="validaAssunto()"></textarea>
+        <div id="txtAssunto" class="verificaInput"><span style="color: red;font-size: 20px;">Deve ser inserida alguma
+            mensagem!!</span>
+        </div>
         <br>
-        <br>
-        <button class="botao">Enviar</button>
+        <button class="botao" onclick="enviar()">Enviar</button>
       </form>
     </div>
   </main>
