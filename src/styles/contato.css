@@ -11,7 +11,7 @@
 
 /*Definindo a imagem de fundo do site*/
 body {
-  background-image: url(/src/img/backeva.jpg);
+  background-image: url('../img/backeva.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -55,7 +55,6 @@ body {
   border: 1px solid rgb(117, 5, 5);
   padding: 5px;
   border-radius: 10px;
-
 }
 
 /*HEADER (H1)*/
@@ -202,3 +201,4 @@ efeito neon */
       0 0 40px #c53c1a,
       0 0 55px #e27114;
   }
+}
