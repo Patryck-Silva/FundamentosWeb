@@ -18,9 +18,11 @@ let assunto = document.getElementById('assunto')/*acessando pelo nome*/
 
 function validaNome(){
   let txt = document.querySelector('#txtNome')
+  
     if(nome.value.length < 3){
         txt.innerHTML = 'Nome inválido'
         txt.style.color = 'red'
+
     }else{ 
         txt.innerHTML = 'Nome válido'
         txt.style.color = 'blue'
